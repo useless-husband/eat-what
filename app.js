@@ -3,7 +3,7 @@ const DEFAULT_ITEMS = [
   "鹹酥雞", "火鍋", "壽司", "義大利麵", "早午餐",
 ];
 const STORAGE_KEY = "eat-what-items";
-const COLORS = ["#ff6b35", "#ffb347", "#ffd166", "#06d6a0", "#4cc9f0", "#a06cd5", "#ef476f", "#f78c6b"];
+const COLORS = ["#ffc2d1", "#ff8fab", "#ffe5ec", "#fb6f92", "#ffb3c6", "#f9a8d4", "#fcd5ce", "#f48fb1"];
 
 const canvas = document.getElementById("wheel");
 const ctx = canvas.getContext("2d");
