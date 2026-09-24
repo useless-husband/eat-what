@@ -1,0 +1,102 @@
+:root {
+  --bg: #fff8f0;
+  --card: #ffffff;
+  --text: #2b2b2b;
+  --accent: #ff6b35;
+  --accent-dark: #e05a28;
+  --muted: #888;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "PingFang TC", "Noto Sans TC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  text-align: center;
+}
+h1 { margin: 0 0 4px; font-size: 2rem; }
+.subtitle { margin: 0 0 20px; color: var(--muted); }
+.wheel-wrap { position: relative; width: 360px; max-width: 100%; margin: 0 auto; }
+#wheel { width: 100%; height: auto; display: block; }
+.pointer {
+  position: absolute;
+  top: -6px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 28px solid var(--accent-dark);
+  z-index: 2;
+}
+.spin-btn {
+  margin-top: 20px;
+  padding: 14px 48px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255,107,53,.35);
+  transition: transform .1s, background .2s;
+}
+.spin-btn:hover { background: var(--accent-dark); }
+.spin-btn:active { transform: scale(.96); }
+.spin-btn:disabled { opacity: .5; cursor: not-allowed; }
+.result { min-height: 2.4rem; margin: 16px 0 0; font-size: 1.5rem; font-weight: bold; }
+.editor {
+  margin-top: 32px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  text-align: left;
+}
+.editor h2 { margin: 0 0 12px; font-size: 1.1rem; }
+.add-row { display: flex; gap: 8px; }
+.add-row input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.add-row button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#list { list-style: none; padding: 0; margin: 12px 0 0; }
+#list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+  border-bottom: 1px solid #f0f0f0;
+}
+#list li button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+#list li button:hover { color: var(--accent-dark); }
+.link-btn {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+}
